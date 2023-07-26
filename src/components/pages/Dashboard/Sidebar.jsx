@@ -21,14 +21,16 @@ const Sidebar = () => {
   };
   return (
     <>
-      <div className="bg-blue-500 text-gray-100 flex justify-between md:hidden">
+      <div className="text-gray-900 flex justify-between md:hidden">
         <div>
           <div className="block cursor-pointer p-4 bold"></div>
         </div>
         <button
           onClick={handleToggle}
-          className="mobile-menu-button p-4 focus:outline-none focus:border-gray-200"
-        ></button>
+          className="mobile-menu-button p-4 focus:outline-sky-700 focus:border-sky-800"
+        >
+          {isActive ? "MENU ☰" : "Close 𐤕"}
+        </button>
       </div>
 
       <div
@@ -64,7 +66,7 @@ const Sidebar = () => {
               }`
             }
           >
-            All Users
+            All Customers
           </NavLink>
           <NavLink
             to="/dashboard/all-products"
@@ -75,6 +77,16 @@ const Sidebar = () => {
             }
           >
             All Products
+          </NavLink>
+          <NavLink
+            to="/dashboard/add-product"
+            className={({ isActive }) =>
+              `flex items-center px-4 py-2 mt-5 hover:text-gray-50 transition-colors duration-300 transform  hover:bg-blue-800 pl-8 rounded-lg ${
+                isActive ? "bg-blue-800  text-white" : " "
+              }`
+            }
+          >
+            Add Products
           </NavLink>
 
           <Link

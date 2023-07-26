@@ -28,7 +28,7 @@ const UserRow = ({ userData, index }) => {
     });
   };
   return (
-    <div className="flex cursor-pointer gap-5 justify-between my-5 bg-red-50 p-4 shadow-lg hover:shadow-xl rounded-lg">
+    <div className="flex cursor-pointer gap-5 justify-between my-5 bg-sky-50 p-4 shadow-lg hover:shadow-xl rounded-lg">
       <p>{index + 1}</p>
       <h1>{name}</h1>
       <p>{email}</p>
