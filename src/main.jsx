@@ -7,6 +7,8 @@ import HomeLayout from "./components/pages/home/HomeLayout.jsx";
 import Provider from "./components/provider/Provider.jsx";
 import Product from "./components/pages/product/Product.jsx";
 import ProductDetails from "./components/pages/product/ProductDetails.jsx";
+import Login from "./components/pages/LoginAndRegistration/Login.jsx";
+import Registration from "./components/pages/LoginAndRegistration/Registration.jsx";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +28,14 @@ const router = createBrowserRouter([
         element: <ProductDetails></ProductDetails>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/productDetails/${params.id}`),
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/registration",
+        element: <Registration></Registration>,
       },
     ],
   },

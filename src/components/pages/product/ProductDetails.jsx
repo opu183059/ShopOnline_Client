@@ -4,11 +4,19 @@ const ProductDetails = () => {
   const product = useLoaderData();
   const { _id, name, image, description, rating, price, available } =
     product || {};
+
+  const Addtocart = (id) => {
+    console.log(id);
+  };
   return (
     <div className="pb-10 pt-24 relative">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row md:items-start items-center gap-8">
         <div>
-          <img src={image} alt={name} className="rounded-xl shadow-lg" />
+          <img
+            src={image}
+            alt={name}
+            className="rounded-xl shadow-lg w-96 h-80"
+          />
         </div>
         <div className="text-left">
           <h1 className="text-lg md:text-3xl mb-6 italic font-bold text-sky-700">
@@ -20,7 +28,12 @@ const ProductDetails = () => {
           <p className="my-5">
             Price: <span className="text-2xl font-bold">${price}</span>
           </p>
-          <button className="md:absolute md:bottom-10 text-sm md:text-base font-normal px-3 py-1 bg-sky-500 hover:bg-sky-700 transition-all duration-300 rounded-md uppercase text-gray-50 ">
+          <button
+            onClick={() => {
+              Addtocart(_id);
+            }}
+            className="md:absolute md:bottom-10 text-sm md:text-base font-normal px-3 py-1 bg-sky-500 hover:bg-sky-700 transition-all duration-300 rounded-md uppercase text-gray-50 "
+          >
             Add to cart
           </button>
         </div>
