@@ -1,9 +1,40 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { Authcontext } from "../../provider/Provider";
+import Swal from "sweetalert2";
 
 /* eslint-disable react/prop-types */
 const ProductsCart = ({ product }) => {
   const { _id, name, image, description, rating, price, available } =
     product || {};
+  const { user } = useContext(Authcontext);
+
+  const Addtocart = (id) => {
+    const cartData = {
+      productID: id,
+      productName: name,
+      productImage: image,
+      productPrice: price,
+      userName: user?.displayName,
+      userEmail: user?.email,
+    };
+    console.log(id);
+    fetch("http://localhost:5000/addToCart", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(cartData),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.insertedId) {
+          Swal.fire({
+            icon: "success",
+            title: "Added to cart",
+            text: "You can see it in your cart",
+          });
+        }
+      });
+  };
   return (
     <div className="group w-80 shadow-lg hover:shadow-xl rounded-xl p-5 cursor-default bg-sky-50/50 hover:bg-sky-50 mb-10">
       <div className="rounded-xl overflow-hidden h-52">
@@ -32,7 +63,12 @@ const ProductsCart = ({ product }) => {
               View Details
             </button>
           </Link>
-          <button className="bg-sky-300/90 hover:bg-sky-700 transition-all duration-150 hover:text-white font-semibold px-3 py-1 rounded-lg">
+          <button
+            onClick={() => {
+              Addtocart(_id);
+            }}
+            className="bg-sky-300/90 hover:bg-sky-700 transition-all duration-150 hover:text-white font-semibold px-3 py-1 rounded-lg"
+          >
             Add to cart
           </button>
         </div>
