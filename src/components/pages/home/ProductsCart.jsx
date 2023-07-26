@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 /* eslint-disable react/prop-types */
 const ProductsCart = ({ product }) => {
   const { id, name, image, description, rating, price, available } =
@@ -8,7 +10,7 @@ const ProductsCart = ({ product }) => {
         <img
           src={image}
           alt=""
-          className="group-hover:scale-110 transition-all duration-200"
+          className="group-hover:scale-110 transition-all duration-200 w-full h-full"
         />
       </div>
       <div>
@@ -25,9 +27,11 @@ const ProductsCart = ({ product }) => {
           </span>
         </p>
         <div className="flex justify-center gap-3 mt-2">
-          <button className="bg-sky-300/90 hover:bg-sky-700 transition-all duration-150 hover:text-white font-semibold px-3 py-1 rounded-lg">
-            View Details
-          </button>
+          <Link to={`/product-details/${id}`}>
+            <button className="bg-sky-300/90 hover:bg-sky-700 transition-all duration-150 hover:text-white font-semibold px-3 py-1 rounded-lg">
+              View Details
+            </button>
+          </Link>
           <button className="bg-sky-300/90 hover:bg-sky-700 transition-all duration-150 hover:text-white font-semibold px-3 py-1 rounded-lg">
             Add to cart
           </button>
