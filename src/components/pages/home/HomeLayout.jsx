@@ -1,7 +1,11 @@
+import Banner from "./Banner";
+import Products from "./Products";
+
 const HomeLayout = () => {
   return (
-    <div className="py-20">
-      <h1>This is home</h1>
+    <div className="">
+      <Banner></Banner>
+      <Products></Products>
     </div>
   );
 };
