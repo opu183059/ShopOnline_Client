@@ -1,12 +1,39 @@
+import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
+import { Authcontext } from "../../provider/Provider";
 
 const ProductDetails = () => {
+  const { user } = useContext(Authcontext);
   const product = useLoaderData();
   const { _id, name, image, description, rating, price, available } =
     product || {};
 
   const Addtocart = (id) => {
+    const cartData = {
+      productID: id,
+      productName: name,
+      productImage: image,
+      productPrice: price,
+      userName: user?.displayName,
+      userEmail: user?.email,
+    };
     console.log(id);
+    fetch("http://localhost:5000/addToCart", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(cartData),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.insertedId) {
+          Swal.fire({
+            icon: "success",
+            title: "Added to cart",
+            text: "You can see it in your cart",
+          });
+        }
+      });
   };
   return (
     <div className="pb-10 pt-24 relative">

@@ -22,6 +22,7 @@ const Login = () => {
     loginWithEmailPass(email, password)
       .then((result) => {
         const loggedInUser = result.user;
+        console.log(loggedInUser);
         form.reset();
       })
       .catch((error) => {

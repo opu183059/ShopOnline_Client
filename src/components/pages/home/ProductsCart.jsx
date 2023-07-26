@@ -6,7 +6,7 @@ const ProductsCart = ({ product }) => {
     product || {};
   return (
     <div className="group w-80 shadow-lg hover:shadow-xl rounded-xl p-5 cursor-default bg-sky-50/50 hover:bg-sky-50 mb-10">
-      <div className="rounded-xl overflow-h_den h-52">
+      <div className="rounded-xl overflow-hidden h-52">
         <img
           src={image}
           alt=""
