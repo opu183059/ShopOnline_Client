@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Product 1",
+    "image": "https://example.com/product1.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "rating": 4.5,
+    "price": 19.99
+  },
+  {
+    "id": 2,
+    "name": "Product 2",
+    "image": "https://example.com/product2.jpg",
+    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "rating": 3.8,
+    "price": 12.49
+  },
+  {
+    "id": 3,
+    "name": "Product 3",
+    "image": "https://example.com/product3.jpg",
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "rating": 5.0,
+    "price": 29.99
+  },
+  {
+    "id": 4,
+    "name": "Product 4",
+    "image": "https://example.com/product4.jpg",
+    "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "rating": 4.2,
+    "price": 17.99
+  },
+  {
+    "id": 5,
+    "name": "Product 5",
+    "image": "https://example.com/product5.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "rating": 4.7,
+    "price": 22.5
+  },
+  {
+    "id": 6,
+    "name": "Product 6",
+    "image": "https://example.com/product6.jpg",
+    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "rating": 3.9,
+    "price": 15.99
+  },
+  {
+    "id": 7,
+    "name": "Product 7",
+    "image": "https://example.com/product7.jpg",
+    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "rating": 4.8,
+    "price": 33.75
+  },
+  {
+    "id": 8,
+    "name": "Product 8",
+    "image": "https://example.com/product8.jpg",
+    "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "rating": 4.0,
+    "price": 10.99
+  },
+  {
+    "id": 9,
+    "name": "Product 9",
+    "image": "https://example.com/product9.jpg",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "rating": 4.6,
+    "price": 27.25
+  },
+  {
+    "id": 10,
+    "name": "Product 10",
+    "image": "https://example.com/product10.jpg",
+    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "rating": 4.2,
+    "price": 18.49
+  }
+]
