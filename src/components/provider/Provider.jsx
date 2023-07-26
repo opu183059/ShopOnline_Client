@@ -15,7 +15,14 @@ const Provider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [product, setProduct] = useState([]);
+  const [role, setRole] = useState(null);
 
+  // get user role
+  const getRoleFromServer = async (email) => {
+    const response = await fetch(`http://localhost:5000/usermail/${email}`);
+    const userFromDB = await response.json();
+    return userFromDB?.role;
+  };
   // register
   const userRegistration = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -26,7 +33,7 @@ const Provider = ({ children }) => {
   };
   //   signout
   const logoutHandle = () => {
-    localStorage.removeItem("accesss-token");
+    setRole("");
     return signOut(auth);
   };
 
@@ -44,7 +51,13 @@ const Provider = ({ children }) => {
     return () => {
       unsubscrive();
     };
-  }, []);
+  }, [user]);
+
+  useEffect(() => {
+    if (user) {
+      getRoleFromServer(user.email).then((res) => setRole(res));
+    }
+  }, [user]);
 
   const Data = {
     user,
@@ -53,6 +66,7 @@ const Provider = ({ children }) => {
     logoutHandle,
     loginWithEmailPass,
     userRegistration,
+    role,
   };
   return <Authcontext.Provider value={Data}>{children}</Authcontext.Provider>;
 };

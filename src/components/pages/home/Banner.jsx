@@ -2,8 +2,8 @@
 const Banner = () => {
   return (
     <div>
-      <div className="hero md:h-screen bg-[url('https://live.staticflickr.com/1556/25084174110_92f7098c7b_b.jpg')] bg-fixed bg-cover">
-        <div className="bg-black/50 w-full hero h-screen">
+      <div className="hero md:h-screen bg-[url('https://e0.pxfuel.com/wallpapers/113/696/desktop-wallpaper-frankenstein-foods-you-re-probably-eating-right-now-episode-interactive-background-anime-background-anime-background-grocery-shopping.jpg')] bg-fixed bg-cover">
+        <div className="bg-black/60 w-full hero h-screen">
           <div className="text-center text-sky-100">
             <div className="flex justify-center mb-2">
               <img

@@ -10,6 +10,7 @@ import ProductDetails from "./components/pages/product/ProductDetails.jsx";
 import Login from "./components/pages/LoginAndRegistration/Login.jsx";
 import Registration from "./components/pages/LoginAndRegistration/Registration.jsx";
 import Cart from "./components/pages/cart/Cart.jsx";
+import Order from "./components/pages/order/Order.jsx";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart></Cart>,
+      },
+      {
+        path: "/order",
+        element: <Order></Order>,
       },
       {
         path: "/login",

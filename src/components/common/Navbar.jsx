@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { Authcontext } from "../provider/Provider";
 
 const Navbar = () => {
-  const { user, logoutHandle } = useContext(Authcontext);
+  const { user, role, logoutHandle } = useContext(Authcontext);
   const Logout = () => {
     logoutHandle()
       .then(() => {})
@@ -84,27 +84,30 @@ const Navbar = () => {
             >
               Product
             </NavLink>
-
-            <NavLink
-              to="/cart"
-              className={({ isActive }) =>
-                isActive
-                  ? " text-blue-700  block px-4 py-2 transition-all duration-300 rounded-md"
-                  : "block px-4 py-2 text-gray-800  hover:text-blue-700 transition-all duration-300 rounded-md"
-              }
-            >
-              Cart
-            </NavLink>
-            <NavLink
-              to="/order"
-              className={({ isActive }) =>
-                isActive
-                  ? " text-blue-700  block px-4 py-2 transition-all duration-300 rounded-md"
-                  : "block px-4 py-2 text-gray-800  hover:text-blue-700 transition-all duration-300 rounded-md"
-              }
-            >
-              Order
-            </NavLink>
+            {role === "User" && (
+              <>
+                <NavLink
+                  to="/cart"
+                  className={({ isActive }) =>
+                    isActive
+                      ? " text-blue-700  block px-4 py-2 transition-all duration-300 rounded-md"
+                      : "block px-4 py-2 text-gray-800  hover:text-blue-700 transition-all duration-300 rounded-md"
+                  }
+                >
+                  Cart
+                </NavLink>
+                <NavLink
+                  to="/order"
+                  className={({ isActive }) =>
+                    isActive
+                      ? " text-blue-700  block px-4 py-2 transition-all duration-300 rounded-md"
+                      : "block px-4 py-2 text-gray-800  hover:text-blue-700 transition-all duration-300 rounded-md"
+                  }
+                >
+                  Order
+                </NavLink>
+              </>
+            )}
             <NavLink
               to="/dashboard"
               className={({ isActive }) =>

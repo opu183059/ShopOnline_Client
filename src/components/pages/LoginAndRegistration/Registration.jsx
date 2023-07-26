@@ -16,6 +16,7 @@ const Registration = () => {
     const saveUserData = {
       email: user?.email,
       name: user?.name,
+      role: user?.role,
     };
     fetch(`http://localhost:5000/users/${user?.email}`, {
       method: "PUT",
@@ -36,7 +37,8 @@ const Registration = () => {
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
-    const user = { name, email, password };
+    const role = form.role.value;
+    const user = { name, email, password, role };
 
     if (!name) {
       Swal.fire({
@@ -147,6 +149,15 @@ const Registration = () => {
               >
                 Email
               </label>
+            </div>
+            <div className="space-y-1 text-sm">
+              <div className="relative z-0 w-full mb-6 group">
+                <label htmlFor="role">Select role: </label>
+                <select name="role" id="role" className="ml-1 p-2 w-8/12">
+                  <option value="User">User</option>
+                  <option value="Admin">Admin</option>
+                </select>
+              </div>
             </div>
             <div className="space-y-1 text-sm">
               <div className="relative z-0 w-full mb-6 group">

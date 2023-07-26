@@ -25,7 +25,7 @@ const Cart = () => {
             </tr>
           </thead>
           <tbody>
-            {cart.map((item) => (
+            {cart?.map((item) => (
               <CartRow key={item._id} item={item}></CartRow>
             ))}
           </tbody>
