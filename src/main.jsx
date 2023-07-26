@@ -12,6 +12,7 @@ import Registration from "./components/pages/LoginAndRegistration/Registration.j
 import Cart from "./components/pages/cart/Cart.jsx";
 import Order from "./components/pages/order/Order.jsx";
 import Dashboard from "./components/pages/Dashboard/Dashboard.jsx";
+import AllUsers from "./components/pages/Dashboard/AllUsers.jsx";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,16 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: "/dashboard/all-users",
+        element: <AllUsers></AllUsers>,
+      },
+      {
+        path: "/dashboard/all-products",
+        element: <h1>All product</h1>,
+      },
+    ],
   },
 ]);
 

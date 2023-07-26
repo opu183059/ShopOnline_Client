@@ -107,7 +107,7 @@ const Navbar = () => {
                 Register
               </NavLink>
             )}
-            {role === "User" && (
+            {user && role === "User" && (
               <>
                 <NavLink
                   to="/cart"
@@ -131,7 +131,7 @@ const Navbar = () => {
                 </NavLink>
               </>
             )}
-            {role === "Admin" && (
+            {user && role === "Admin" && (
               <NavLink
                 to="/dashboard"
                 className={({ isActive }) =>
