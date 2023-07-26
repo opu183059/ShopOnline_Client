@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 
 /* eslint-disable react/prop-types */
 const ProductsCart = ({ product }) => {
-  const { id, name, image, description, rating, price, available } =
+  const { _id, name, image, description, rating, price, available } =
     product || {};
   return (
     <div className="group w-80 shadow-lg hover:shadow-xl rounded-xl p-5 cursor-default bg-sky-50/50 hover:bg-sky-50 mb-10">
-      <div className="rounded-xl overflow-hidden h-52">
+      <div className="rounded-xl overflow-h_den h-52">
         <img
           src={image}
           alt=""
@@ -27,7 +27,7 @@ const ProductsCart = ({ product }) => {
           </span>
         </p>
         <div className="flex justify-center gap-3 mt-2">
-          <Link to={`/product-details/${id}`}>
+          <Link to={`/product-details/${_id}`}>
             <button className="bg-sky-300/90 hover:bg-sky-700 transition-all duration-150 hover:text-white font-semibold px-3 py-1 rounded-lg">
               View Details
             </button>
