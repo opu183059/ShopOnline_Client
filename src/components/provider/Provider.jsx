@@ -4,7 +4,7 @@ export const Authcontext = createContext(null);
 const Provider = ({ children }) => {
   const [product, setProduct] = useState([]);
   useEffect(() => {
-    fetch("/src/assets/data.json")
+    fetch("http://localhost:5000/allProducts")
       .then((res) => res.json())
       .then((res) => setProduct(res));
   }, []);

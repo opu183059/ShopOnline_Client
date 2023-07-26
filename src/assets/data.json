@@ -1,60 +1,53 @@
 [
   {
-    "id": 1,
-    "name": "Product 1",
+    "name": "Alexa",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0h_rj8wteOubtQoGS5ieCFzVEIs1jP--xbQ&usqp=CAU",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "description": "Alexa Home for your smart home",
     "rating": 4.5,
     "price": 19.99,
     "available": 1000
   },
   {
-    "id": 2,
-    "name": "Product 2",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0h_rj8wteOubtQoGS5ieCFzVEIs1jP--xbQ&usqp=CAU",
-    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ",
+    "name": "MX Headphone",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNltuyMi7A5BSapuigHN4eHZ8r1lvuTyvYgw&usqp=CAU",
+    "description": "MX Headphone for better sound",
     "rating": 3.8,
     "price": 12.49,
     "available": 1000
   },
   {
-    "id": 3,
-    "name": "Product 3",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0h_rj8wteOubtQoGS5ieCFzVEIs1jP--xbQ&usqp=CAU",
-    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse",
+    "name": "11 Combo",
+    "image": "https://thumbs.dreamstime.com/b/many-used-modern-electronic-gadgets-use-white-floor-reuse-recycle-concept-top-view-164230611.jpg",
+    "description": "11 Items in one pach",
     "rating": 5.0,
-    "price": 29.99,
+    "price": 2900.99,
     "available": 1000
   },
   {
-    "id": 4,
-    "name": "Product 4",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0h_rj8wteOubtQoGS5ieCFzVEIs1jP--xbQ&usqp=CAU",
-    "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt",
+    "name": "Mini Wakie",
+    "image": "https://i.ebayimg.com/images/g/-WQAAOSwzQxgHwvh/s-l400.jpg",
+    "description": "Mini walkie talkie for your kids",
     "rating": 4.2,
     "price": 17.99,
     "available": 1000
   },
   {
-    "id": 5,
-    "name": "Product 5",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0h_rj8wteOubtQoGS5ieCFzVEIs1jP--xbQ&usqp=CAU",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "name": "Flim scanner",
+    "image": "https://m.media-amazon.com/images/I/71jLhoNj68L._AC_UF350,350_QL80_.jpg",
+    "description": "Flim scanner for your university",
     "rating": 4.7,
     "price": 22.5,
     "available": 1000
   },
   {
-    "id": 6,
     "name": "Product 6",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0h_rj8wteOubtQoGS5ieCFzVEIs1jP--xbQ&usqp=CAU",
-    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+    "description": "Ut enim ad minim veniam, quis nostrud",
     "rating": 3.9,
     "price": 15.99,
     "available": 1000
   },
   {
-    "id": 7,
     "name": "Product 7",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0h_rj8wteOubtQoGS5ieCFzVEIs1jP--xbQ&usqp=CAU",
     "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse ",
@@ -63,7 +56,6 @@
     "available": 1000
   },
   {
-    "id": 8,
     "name": "Product 8",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0h_rj8wteOubtQoGS5ieCFzVEIs1jP--xbQ&usqp=CAU",
     "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa",
@@ -72,7 +64,6 @@
     "available": 1000
   },
   {
-    "id": 9,
     "name": "Product 9",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0h_rj8wteOubtQoGS5ieCFzVEIs1jP--xbQ&usqp=CAU",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -81,7 +72,6 @@
     "available": 1000
   },
   {
-    "id": 10,
     "name": "Product 10",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0h_rj8wteOubtQoGS5ieCFzVEIs1jP--xbQ&usqp=CAU",
     "description": "Ut enim ad minim veniam, quis nostrud exercitation ",
