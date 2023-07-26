@@ -4,7 +4,7 @@ import UserRow from "./UserRow";
 const AllUsers = () => {
   const [user, setUser] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/allusers")
+    fetch("https://shop-online-server.vercel.app/allusers")
       .then((res) => res.json())
       .then((result) => {
         setUser(result);

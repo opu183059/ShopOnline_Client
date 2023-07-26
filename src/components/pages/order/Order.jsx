@@ -7,7 +7,7 @@ const Order = () => {
   const [order, setOrder] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myOrder/${user?.email}`)
+    fetch(`https://shop-online-server.vercel.app/myOrder/${user?.email}`)
       .then((res) => res.json())
       .then((result) => {
         setOrder(result);

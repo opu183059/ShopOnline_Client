@@ -19,7 +19,9 @@ const Provider = ({ children }) => {
 
   // get user role
   const getRoleFromServer = async (email) => {
-    const response = await fetch(`http://localhost:5000/usermail/${email}`);
+    const response = await fetch(
+      `https://shop-online-server.vercel.app/usermail/${email}`
+    );
     const userFromDB = await response.json();
     return userFromDB?.role;
   };
@@ -38,7 +40,7 @@ const Provider = ({ children }) => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/allProducts")
+    fetch("https://shop-online-server.vercel.app/allProducts")
       .then((res) => res.json())
       .then((res) => setProduct(res));
   }, []);

@@ -20,7 +20,7 @@ const ProductsCart = ({ product }) => {
         userEmail: user?.email,
       };
       console.log(id);
-      fetch("http://localhost:5000/addToCart", {
+      fetch("https://shop-online-server.vercel.app/addToCart", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(cartData),

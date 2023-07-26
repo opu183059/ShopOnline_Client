@@ -25,7 +25,7 @@ const CartRow = ({ item }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/deleteCart/${id}`, {
+        fetch(`https://shop-online-server.vercel.app/deleteCart/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -49,7 +49,7 @@ const CartRow = ({ item }) => {
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch("http://localhost:5000/checkOut", {
+        fetch("https://shop-online-server.vercel.app/checkOut", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(checkOutData),

@@ -7,7 +7,7 @@ const Banner = () => {
           <div className="text-center text-sky-50">
             <div className="flex justify-center mb-2">
               <img
-                src="/src/assets/repliqLogo.png"
+                src="/public/repliqLogo.png"
                 alt=""
                 className="w-16 md:w-20 p-2 bg-white rounded-full shadow-md shadow-sky-600"
               />

@@ -14,7 +14,7 @@ const ProductsRow = ({ productData, index }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/productDelete/${id}`, {
+        fetch(`https://shop-online-server.vercel.app/productDelete/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

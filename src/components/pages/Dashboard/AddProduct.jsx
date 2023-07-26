@@ -13,7 +13,7 @@ const AddProduct = () => {
 
     const productData = { name, image, description, rating, price, available };
 
-    fetch("http://localhost:5000/addProduct", {
+    fetch("https://shop-online-server.vercel.app/addProduct", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(productData),
@@ -34,9 +34,9 @@ const AddProduct = () => {
   };
   return (
     <div>
-      <div className="w-9/12 md:w-7/12 lg:w-6/12 mx-auto my-10">
+      <div className="w-9/12 md:w-9/12 mx-auto my-10">
         <div className="md:w-10/12 mx-auto w-full p-8 space-y-3 rounded-xl  bg-indigo-50 ">
-          <h1 className="text-2xl font-bold text-center">Registration</h1>
+          <h1 className="text-2xl font-bold text-center">Add Product</h1>
 
           <form
             onSubmit={addClass}

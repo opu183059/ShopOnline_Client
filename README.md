@@ -1,8 +1,27 @@
-# React + Vite
+# Shop Online
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Embrace the Future with TechXpert - Your ultimate tech destination. Stay ahead with the latest gadgets, cutting-edge electronics, and innovative accessories. Whether you're a tech enthusiast or a casual user, TechXpert has something to elevate your digital experience.
 
-Currently, two official plugins are available:
+## Live Link
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[craftopia.com](https://shoponline-3d530.web.app/)
+
+or, https://shoponline-3d530.web.app/
+
+## Technology used
+
+- dotenv
+- firebase
+- react
+- sweetalert2
+- Tailwind
+- DaisyUI
+- MongoDB
+
+## Client Links
+
+https://github.com/opu183059/ShopOnline_Client
+
+## Server Links
+
+https://github.com/opu183059/ShopOnline_Server

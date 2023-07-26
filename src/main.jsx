@@ -15,6 +15,7 @@ import Dashboard from "./components/pages/Dashboard/Dashboard.jsx";
 import AllUsers from "./components/pages/Dashboard/AllUsers.jsx";
 import AllProducts from "./components/pages/Dashboard/AllProducts.jsx";
 import AddProduct from "./components/pages/Dashboard/AddProduct.jsx";
+import OrderList from "./components/pages/Dashboard/OrderList.jsx";
 
 const router = createBrowserRouter([
   {
@@ -33,7 +34,9 @@ const router = createBrowserRouter([
         path: "/product-details/:id",
         element: <ProductDetails></ProductDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/productDetails/${params.id}`),
+          fetch(
+            `https://shop-online-server.vercel.app/productDetails/${params.id}`
+          ),
       },
       {
         path: "/cart",
@@ -68,6 +71,10 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/add-product",
         element: <AddProduct></AddProduct>,
+      },
+      {
+        path: "/dashboard/order-list",
+        element: <OrderList></OrderList>,
       },
     ],
   },

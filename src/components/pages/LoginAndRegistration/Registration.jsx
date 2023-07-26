@@ -19,7 +19,7 @@ const Registration = () => {
       name: user?.name,
       role: user?.role,
     };
-    fetch(`http://localhost:5000/users/${user?.email}`, {
+    fetch(`https://shop-online-server.vercel.app/users/${user?.email}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -39,7 +39,8 @@ const Registration = () => {
     const email = form.email.value;
     const password = form.password.value;
     const role = form.role.value;
-    const user = { name, email, password, role };
+    const number = form.number.value;
+    const user = { name, email, password, role, number };
 
     if (!name) {
       Swal.fire({
@@ -54,6 +55,14 @@ const Registration = () => {
         icon: "error",
         title: "Email ID missing",
         text: "Please give a valid email id",
+      });
+      return;
+    }
+    if (!number || number.length != 11) {
+      Swal.fire({
+        icon: "error",
+        title: "Invalid number",
+        text: "Password Give a bangladeshi number, ex: 01533222222",
       });
       return;
     }
@@ -73,6 +82,7 @@ const Registration = () => {
       });
       return;
     }
+
     if ((email, password)) {
       setErrorMessage("");
       userRegistration(email, password)
@@ -151,6 +161,21 @@ const Registration = () => {
                 className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus: peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
               >
                 Email
+              </label>
+            </div>
+            <div className="relative z-0 w-full mb-6 group">
+              <input
+                type="number"
+                name="number"
+                id="number"
+                className="block py-2.5 px-0 w-full text-sm text-black bg-transparent border-0 border-b-2 appearance-none border-gray-600  fo focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=" "
+              />
+              <label
+                htmlFor="number"
+                className="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus: peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+              >
+                Number
               </label>
             </div>
             <div className="space-y-1 text-sm">
