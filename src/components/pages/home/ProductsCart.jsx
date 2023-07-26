@@ -10,30 +10,38 @@ const ProductsCart = ({ product }) => {
   const { user } = useContext(Authcontext);
 
   const Addtocart = (id) => {
-    const cartData = {
-      productID: id,
-      productName: name,
-      productImage: image,
-      productPrice: price,
-      userName: user?.displayName,
-      userEmail: user?.email,
-    };
-    console.log(id);
-    fetch("http://localhost:5000/addToCart", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(cartData),
-    })
-      .then((res) => res.json())
-      .then((result) => {
-        if (result.insertedId) {
-          Swal.fire({
-            icon: "success",
-            title: "Added to cart",
-            text: "You can see it in your cart",
-          });
-        }
+    if (user) {
+      const cartData = {
+        productID: id,
+        productName: name,
+        productImage: image,
+        productPrice: price,
+        userName: user?.displayName,
+        userEmail: user?.email,
+      };
+      console.log(id);
+      fetch("http://localhost:5000/addToCart", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(cartData),
+      })
+        .then((res) => res.json())
+        .then((result) => {
+          if (result.insertedId) {
+            Swal.fire({
+              icon: "success",
+              title: "Added to cart",
+              text: "You can see it in your cart",
+            });
+          }
+        });
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Cannot add to cart",
+        text: "To add you have to login First",
       });
+    }
   };
   return (
     <div className="group w-80 shadow-lg hover:shadow-xl rounded-xl p-5 cursor-default bg-sky-50/50 hover:bg-sky-50 mb-10">

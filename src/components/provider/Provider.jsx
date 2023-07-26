@@ -67,6 +67,7 @@ const Provider = ({ children }) => {
     loginWithEmailPass,
     userRegistration,
     role,
+    setRole,
   };
   return <Authcontext.Provider value={Data}>{children}</Authcontext.Provider>;
 };

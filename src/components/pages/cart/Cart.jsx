@@ -14,7 +14,7 @@ const Cart = () => {
   }, [cart]);
   console.log(cart);
   return (
-    <div className="pt-20">
+    <div className="pt-20 min-h-screen">
       <div className="overflow-x-auto max-w-6xl mx-auto">
         <table className="table">
           <thead>

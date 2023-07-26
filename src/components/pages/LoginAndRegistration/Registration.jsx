@@ -6,7 +6,8 @@ import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 
 const Registration = () => {
-  const { userRegistration, logoutHandle, user } = useContext(Authcontext);
+  const { userRegistration, logoutHandle, user, setRole } =
+    useContext(Authcontext);
   const [errorMessage, setErrorMessage] = useState("");
   const [successfull, setSuccessfull] = useState("");
   const [haveMessage, setHaveMessage] = useState("Already have an account?");
@@ -73,6 +74,7 @@ const Registration = () => {
       return;
     }
     if ((email, password)) {
+      setErrorMessage("");
       userRegistration(email, password)
         .then((result) => {
           const loggedUser = result.user;
@@ -98,6 +100,7 @@ const Registration = () => {
             .catch((error) => {
               console.log(error);
             });
+          setRole("");
         })
         .catch((error) => {
           let errrormessage = error.code.split("auth/")[1];

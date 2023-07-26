@@ -15,7 +15,7 @@ const Order = () => {
   }, []);
   console.log(order);
   return (
-    <div className="py-20">
+    <div className="pt-20 min-h-screen">
       {order?.map((item) => (
         <OrderRow key={item._id} item={item}></OrderRow>
       ))}

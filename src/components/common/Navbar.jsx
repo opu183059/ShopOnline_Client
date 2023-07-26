@@ -42,15 +42,26 @@ const Navbar = () => {
               <li>
                 <Link to={"/product"}>Product</Link>
               </li>
-              <li>
-                <Link to={"/cart"}>Cart</Link>
-              </li>
-              <li>
-                <Link to={"/order"}>Order</Link>
-              </li>
-              <li>
-                <Link to={"/dashboard"}>Dashboard</Link>
-              </li>
+              {!user && (
+                <li>
+                  <Link to={"/registration"}>Registration</Link>
+                </li>
+              )}
+              {role === "User" && (
+                <>
+                  <li>
+                    <Link to={"/cart"}>Cart</Link>
+                  </li>
+                  <li>
+                    <Link to={"/order"}>Order</Link>
+                  </li>
+                </>
+              )}
+              {role === "Admin" && (
+                <li>
+                  <Link to={"/dashboard"}>Dashboard</Link>
+                </li>
+              )}
             </ul>
           </div>
           <Link to="/" className="icon flex items-center">
@@ -84,6 +95,18 @@ const Navbar = () => {
             >
               Product
             </NavLink>
+            {!user && (
+              <NavLink
+                to="/registration"
+                className={({ isActive }) =>
+                  isActive
+                    ? " text-blue-700  block px-4 py-2 transition-all duration-300 rounded-md"
+                    : "block px-4 py-2 text-gray-800  hover:text-blue-700 transition-all duration-300 rounded-md"
+                }
+              >
+                Register
+              </NavLink>
+            )}
             {role === "User" && (
               <>
                 <NavLink
@@ -108,16 +131,18 @@ const Navbar = () => {
                 </NavLink>
               </>
             )}
-            <NavLink
-              to="/dashboard"
-              className={({ isActive }) =>
-                isActive
-                  ? " text-blue-700  block px-4 py-2 transition-all duration-300 rounded-md"
-                  : "block px-4 py-2 text-gray-800  hover:text-blue-700 transition-all duration-300 rounded-md"
-              }
-            >
-              Dashboard
-            </NavLink>
+            {role === "Admin" && (
+              <NavLink
+                to="/dashboard"
+                className={({ isActive }) =>
+                  isActive
+                    ? " text-blue-700  block px-4 py-2 transition-all duration-300 rounded-md"
+                    : "block px-4 py-2 text-gray-800  hover:text-blue-700 transition-all duration-300 rounded-md"
+                }
+              >
+                Dashboard
+              </NavLink>
+            )}
           </div>
         </div>
         <div className="navbar-end">

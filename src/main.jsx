@@ -11,6 +11,7 @@ import Login from "./components/pages/LoginAndRegistration/Login.jsx";
 import Registration from "./components/pages/LoginAndRegistration/Registration.jsx";
 import Cart from "./components/pages/cart/Cart.jsx";
 import Order from "./components/pages/order/Order.jsx";
+import Dashboard from "./components/pages/Dashboard/Dashboard.jsx";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
         element: <Registration></Registration>,
       },
     ],
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard></Dashboard>,
   },
 ]);
 

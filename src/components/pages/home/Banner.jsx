@@ -3,8 +3,8 @@ const Banner = () => {
   return (
     <div>
       <div className="hero md:h-screen bg-[url('https://e0.pxfuel.com/wallpapers/113/696/desktop-wallpaper-frankenstein-foods-you-re-probably-eating-right-now-episode-interactive-background-anime-background-anime-background-grocery-shopping.jpg')] bg-fixed bg-cover">
-        <div className="bg-black/60 w-full hero h-screen">
-          <div className="text-center text-sky-100">
+        <div className="bg-black/60 w-full hero h-screen backdrop-blur-[2px]">
+          <div className="text-center text-sky-50">
             <div className="flex justify-center mb-2">
               <img
                 src="/src/assets/repliqLogo.png"
@@ -23,7 +23,7 @@ const Banner = () => {
             <p
               data-aos="zoom-in"
               data-aos-duration="1800"
-              className="text-base w-9/12 mx-auto backdrop-blur-[2px] italic"
+              className="text-base w-9/12 mx-auto  italic"
             >
               "Embrace the Future with TechXpert - Your ultimate tech
               destination. Stay ahead with the latest gadgets, cutting-edge
